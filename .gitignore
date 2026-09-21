@@ -1,0 +1,13 @@
+.cursor/
+.vscode/
+*.o
+*.out
+*.exe
+.DS_Store
+
+# Linux compiled executables
+/Module-3/LinkedList/LinkedList
+/Module-2/VectorSorting/VectorSorting
+
+# Temporary office document lock files
+.~lock.*#
