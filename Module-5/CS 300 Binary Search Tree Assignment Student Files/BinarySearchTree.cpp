@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : BinarySearchTree.cpp
-// Author      : Your name
+// Author      : Darnell Johnson
 // Version     : 1.0
 // Copyright   : Copyright � 2023 SNHU COCE
 // Description : Lab 5-2 Binary Search Tree
@@ -86,6 +86,7 @@ public:
 BinarySearchTree::BinarySearchTree() {
     // FixMe (1): initialize housekeeping variables
     //root is equal to nullptr
+    root = nullptr; 
 }
 
 /**
@@ -94,6 +95,9 @@ BinarySearchTree::BinarySearchTree() {
 BinarySearchTree::~BinarySearchTree() {
     //FixMe (2)
     // recurse from root deleting every node
+    while (root != nullptr) {
+        root = removeNode(root, root->bid.bidId); 
+    }
 }
 
 /**
@@ -102,6 +106,7 @@ BinarySearchTree::~BinarySearchTree() {
 void BinarySearchTree::InOrder() {
     // FixMe (3a): In order root
     // call inOrder fuction and pass root 
+    inOrder(root);
 }
 
 /**
@@ -110,6 +115,7 @@ void BinarySearchTree::InOrder() {
 void BinarySearchTree::PostOrder() {
     // FixMe (4a): Post order root
     // postOrder root
+    postOrder(root); 
 }
 
 /**
@@ -118,6 +124,7 @@ void BinarySearchTree::PostOrder() {
 void BinarySearchTree::PreOrder() {
     // FixMe (5a): Pre order root
     // preOrder root
+    preOrder(root);
 }
 
 
